@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval"> <!-- 形状：圆形 -->
+    <solid android:color="#FF40FF69" /> <!-- 填充颜色（不透明） -->
+</shape>

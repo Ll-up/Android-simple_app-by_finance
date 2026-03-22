@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <!-- 左侧推荐/收益 -->
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_hot_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐"
+            android:textColor="#6B7280"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_hot_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6.9%~6.9%"
+            android:textColor="#E11D48"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp" />
+    </LinearLayout>
+
+    <!-- 中间产品信息 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_hot_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="政盈11号24个月"
+            android:textColor="#111827"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_hot_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="期限：24个月"
+            android:textColor="#6B7280"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tv_hot_min_invest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="起投金额：100万"
+            android:textColor="#6B7280"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <!-- 右侧按钮 -->
+    <Button
+        android:id="@+id/btn_hot_reserve"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:text="去预约"
+        android:textSize="14sp"
+        android:background="@drawable/bg_hot_sale_reserve_btn"
+        android:textColor="#E11D48"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>
+

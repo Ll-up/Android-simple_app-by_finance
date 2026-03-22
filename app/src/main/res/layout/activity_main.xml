@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_banner"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+
+    <!-- 轮播指示器 -->
+    <LinearLayout
+        android:id="@+id/ll_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/vp_banner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" />
+
+    <!-- 外层用LinearLayout替代RelativeLayout，支持weight均分 -->
+    <LinearLayout
+        android:id="@+id/bas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/vp_banner"
+        android:layout_margin="5dp"
+        android:weightSum="4">
+
+        <!-- 1. 太极 -->
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="5dp"
+            android:background="?attr/selectableItemBackground">
+            <!--如需添加点击水波纹效果，可给子 LinearLayout 添加android:background="?attr/selectableItemBackground"-->
+
+            <ImageView
+                android:id="@+id/im_1"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:src="@drawable/bt_1"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="太极"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <!-- 2. 订阅 -->
+        <LinearLayout
+            android:id="@+id/ll_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="5dp"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/bt_2"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:src="@drawable/bt_2"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订阅"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <!-- 3. 预约 -->
+        <LinearLayout
+            android:id="@+id/ll_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="5dp"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/bt_3"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:src="@drawable/bt_3"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预约"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <!-- 4. 联系 -->
+        <LinearLayout
+            android:id="@+id/ll_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="5dp"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/bt_4"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:src="@drawable/bt_4"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@+id/bas">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 精选热销标题行 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_hot_sale_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="精选热销"
+                    android:textColor="#111827"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hot_sale_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看更多"
+                    android:textColor="#6B7280"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 热销列表：放在 ScrollView 内，禁用自身滚动，让整体由 ScrollView 控制 -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_hot_sale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="16dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
